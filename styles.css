@@ -1,0 +1,14 @@
+a{
+    --bs-navbar-brand-color: #ffffff;
+    --bs-navbar-brand-hover-color: #ffffff;
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
+    --bs-navbar-hover-color: #ffffff;
+    --bs-navbar-disabled-color: #ffffff;
+}
+body{
+    background: #eeedec;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    color: #ffffff;
+}
