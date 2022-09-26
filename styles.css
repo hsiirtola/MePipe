@@ -1,14 +1,11 @@
 a{
     --bs-navbar-brand-color: #ffffff;
-    --bs-navbar-brand-hover-color: #ffffff;
+    --bs-navbar-brand-hover-color: #bfbfbf;
     --bs-nav-link-color: #ffffff;
-    --bs-nav-link-hover-color: #ffffff;
+    --bs-nav-link-hover-color: #bfbfbf;
     --bs-navbar-hover-color: #ffffff;
-    --bs-navbar-disabled-color: #ffffff;
+    --bs-navbar-disabled-color: #bfbfbf;
 }
-body{
-    background: #eeedec;
-    letter-spacing: 0.1em;
-    font-size: 0.8em;
-    color: #ffffff;
+.fa-magnifying-glass{
+    color: white;
 }
