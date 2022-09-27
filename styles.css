@@ -1,10 +1,39 @@
-a{
-    --bs-navbar-brand-color: #ffffff;
-    --bs-navbar-brand-hover-color: #bfbfbf;
-    --bs-nav-link-color: #ffffff;
-    --bs-nav-link-hover-color: #bfbfbf;
-    --bs-navbar-hover-color: #ffffff;
-    --bs-navbar-disabled-color: #bfbfbf;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #181818;
+    color: white;
+}
+.testimonial-grid-header{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    padding-block: 2rem;
+    width: 100%;
+    margin-inline: auto;
+    background-color: #212121;
+}
+.testimonial-grid{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    padding-block: 2rem;
+    width: 95%;
+    margin-inline: auto;
+    justify-items: center;
+    align-items: center;
+}
+header form{
+    display: flex;
+    padding-top: 7px;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 .fa-magnifying-glass{
     color: white;
