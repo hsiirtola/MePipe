@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:;base64,=">
+  <title>MePipe</title>
+</head>
+<body>
+  <section class="header testimonial-grid-header">
+    <header class="mx-5">
+      <a href="index.html" style="text-decoration: none;color:white;">
+        <h1>MePipe</h1>
+      </a>
+    </header>
+    <header>
+      <form class="search">
+        <input class="form-control" type="text" name="search" placeholder="Search">
+        <button class="btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </header>
+  </section>
+  <main>
+    <form>
+      <input type="file" id="file" required>
+      <progress id="progress_bar" value="0" max="100"></progress>
+      <input type="text" id="title" required>
+    </form>
+    
+  </main>
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>  
+  <script src="index.js"></script>
+</body>
+</html>
