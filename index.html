@@ -24,12 +24,22 @@
         </button>
       </form>
     </header>
+    <header style="margin-left:2rem">
+      <form class="upload">
+        <input type="file" id="file" required>
+        <input type="text" id="title" required>
+        <button class="btn" id="fileupload">
+          <i class="fa-solid fa-upload"></i>
+        </button>
+        <progress style="display:none" id="progress_bar" value="0" max="100"></progress>
+      </form>
+    </header>
   </section>
 
-  <main class="testimonial-grid">
-    <a href="video1.html" style="color:white;text-decoration: none;">
+  <main class="testimonial-grid" id="videocontainer">
+    <!-- <a href="video1.html" style="color:white;text-decoration: none;">
       <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
+        <video class="card-img-top" src="http://localhost:3000/video"></video>
         <div class="card-body">
           <h5 class="card-title">Video title</h5>
         </div>
@@ -48,52 +58,12 @@
           <small class="text-muted">Upload date</small>
         </div>
       </div>
-    </a>
-    <a href="video1.html" style="color:white;text-decoration: none;">
-      <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Video title</h5>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Upload date</small>
-        </div>
-      </div>
-    </a>
-    <a href="video1.html" style="color:white;text-decoration: none;">
-      <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Video title</h5>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Upload date</small>
-        </div>
-      </div>
-    </a>
-    <a href="video1.html" style="color:white;text-decoration: none;">
-      <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Video title</h5>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Upload date</small>
-        </div>
-      </div>
-    </a>
-    <a href="video1.html" style="color:white;text-decoration: none;">
-      <div class="card">
-        <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Video title</h5>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Upload date</small>
-        </div>
-      </div>
-    </a>
+    </a> -->
   </main>
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>  
   <script src="index.js"></script>
 </body>
 </html>

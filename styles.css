@@ -29,16 +29,23 @@ body{
     justify-items: center;
     align-items: center;
 }
-header form{
+header .search{
     display: flex;
     padding-top: 7px;
     align-items: center;
     flex-wrap: nowrap;
 }
+header .upload{
+    max-width: 480px;
+}
 .fa-magnifying-glass{
     color: white;
 }
+.fa-upload{
+    color: white;
+}
 .card{
+    max-width: 300px;
     background-color: #212121;
 }
 .flex{
