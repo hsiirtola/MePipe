@@ -27,12 +27,12 @@
   </section>
   <main class="flex">
     <div class="videowrapper">
-      <video id="videoplayer" src="http://localhost:3000/video" width="1080" controls></video>
-      <h5 class="mx-2 mt-2 py-2 my-0">Video title</h5>
-      <p class="mx-2 pt-3 m-auto text-muted">hi guys today welcome to my video</p>
+      <video id="videoplayer" src="" width="1080" controls></video>
+      <h5 class="mx-2 mt-2 py-2 my-0" id="videotitle">Video title</h5>
+      <p class="mx-2 pt-3 m-auto text-muted" id="videouploadtime">Uploaded</p>
     </div>
     <div class="videomenu">
-      <a href="video1.html" style="color:white;text-decoration: none;">
+      <!-- <a href="video1.html" style="color:white;text-decoration: none;">
         <div class="card">
           <img class="card-img-top" src="https://via.placeholder.com/278x156" alt="Card image cap">
           <div class="card-body">
@@ -64,8 +64,10 @@
             <small class="text-muted">Upload date</small>
           </div>
         </div>
-      </a>
+      </a> -->
     </div>
   </main>
+  <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script> 
+  <script src="video.js"></script>
 </body>
 </html>

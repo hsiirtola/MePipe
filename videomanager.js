@@ -1,14 +1,10 @@
-const index = require('./index.js')
 const express = require('express')
 const fs = require('fs')
 const app = express()
-const firebase = require("firebase/app")
-require("firebase/auth")
-require("firebase/firestore")
 
 app.get('/video', (req, res) => {
     const range = req.headers.range
-    const videoPath = index.url
+    const videoPath = './xd.mp4'
     const videoSize = fs.statSync(videoPath).size
 
     const chunkSize = 1 * 1e+6

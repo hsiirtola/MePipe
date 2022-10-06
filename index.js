@@ -19,19 +19,37 @@ colRef.onSnapshot(col => {
             { addSuffix: true }
             )
         const html = `
-        <a href="video1.html" style="color:white;text-decoration: none;">
-            <div class="card">
-                <video class="card-img-top" src="${doc.data().url}"></video>
-                <div class="card-body">
-                    <h5 class="card-title">${doc.data().title}</h5>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">${when}</small>
-                </div>
+        <div class="card" style="color:white;text-decoration: none;">
+            <video class="card-img-top" src="${doc.data().url}"></video>
+            <div class="card-body">
+                <h5 class="card-title">${doc.data().title}</h5>
             </div>
-        </a>
+            <div class="card-footer">
+                <small class="text-muted">${when}</small>
+            </div>
+        </div>
         `
         document.getElementById('videocontainer').innerHTML += html
+    })
+    document.getElementById('videocontainer').addEventListener('click', e => {
+        if(e.target.closest('.card')){
+            console.log(e.target.closest('.card').querySelector('.card-title').textContent)
+            videoTitle = e.target.closest('.card').querySelector('.card-title').textContent
+            col.docs.forEach(doc => {
+                if(doc.data().title == videoTitle){
+                    const videoUploaded = dateFns.distanceInWordsToNow(
+                        doc.data().createdAt.toDate(),
+                        { addSuffix: true }
+                        )
+                    videoTitle = doc.data().title
+                    videoURL = doc.data().url
+                    localStorage.setItem('videoTitle', videoTitle)
+                    localStorage.setItem('videoUploaded', videoUploaded)
+                    localStorage.setItem('videoURL', videoURL)
+                }
+            })
+            window.location.href = 'video1.html'
+        }
     })
 })
 

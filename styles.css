@@ -47,6 +47,7 @@ header .upload{
 .card{
     max-width: 300px;
     background-color: #212121;
+    cursor: pointer;
 }
 .flex{
     display: flex;
