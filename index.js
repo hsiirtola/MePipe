@@ -64,7 +64,7 @@ document.getElementById('file').addEventListener('change', e => {
             const progressBar = document.getElementById('progress_bar')
             progressBar.style.display = 'inline-block'
             progressBar.value = progress
-            if(progress == 100){
+            if(progress === 100){
                 setTimeout(() => {
                     const url = storageRef.getDownloadURL().then(url => {
                         console.log(url)
@@ -73,9 +73,12 @@ document.getElementById('file').addEventListener('change', e => {
                             url: url,
                             createdAt: firebase.firestore.Timestamp.fromDate(now)
                         })
-                        document.getElementById('videocontainer').innerHTML == ``
-                })
+                        setTimeout(() => {
+                            document.location.reload(true)
+                        }, 1000)
+                    })
                 }, 3000)
+                document.getElementById('videocontainer').innerHTML = ''
             }
         })
     })
