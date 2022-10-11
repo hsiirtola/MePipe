@@ -13,6 +13,7 @@ const db = firebase.firestore()
 const colRef = db.collection('videos')
 
 colRef.onSnapshot(col => {
+    document.getElementById('videocontainer').innerHTML = ''
     col.docs.forEach(doc => {
         const when = dateFns.distanceInWordsToNow(
             doc.data().createdAt.toDate(),
@@ -78,7 +79,6 @@ document.getElementById('file').addEventListener('change', e => {
                         }, 1000)
                     })
                 }, 3000)
-                document.getElementById('videocontainer').innerHTML = ''
             }
         })
     })
