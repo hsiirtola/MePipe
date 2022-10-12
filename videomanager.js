@@ -1,3 +1,5 @@
+// File is functional but obsolete for the current project
+
 const express = require('express')
 const fs = require('fs')
 const app = express()
